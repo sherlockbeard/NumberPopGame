@@ -6,6 +6,6 @@ import android.os.Bundle
 class GamePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_page)
+        setContentView(R.layout.game_page)
     }
 }
