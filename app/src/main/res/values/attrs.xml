@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="toastFrameBackground" format="reference" />
+
+    <attr name="TextColor" format="reference|color" />
+
+    <attr name="colorOnPrimary" format="reference|color" />
+    
+</resources>
