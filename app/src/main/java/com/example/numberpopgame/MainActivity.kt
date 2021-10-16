@@ -46,16 +46,18 @@ class MainActivity : AppCompatActivity() {
         val height = LinearLayout.LayoutParams.WRAP_CONTENT
         val popupWindow = PopupWindow(view, width, height, true)
 
-        popupWindow.showAtLocation(view, Gravity.CENTER, 10, 10 + 1) // dismiss the popup window when touched
+        popupWindow.isOutsideTouchable = false
+        popupWindow.isTouchable = true
+        popupWindow.isFocusable = false
+
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 100, 10 + 1) // dismiss the popup window when touched
 
         // dismiss the popup window when touched
-        view.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-                currentNumber++
-                popupWindow.dismiss()
-                GameStart()
-                return true
-            }
-        })
+        view.setOnTouchListener { v, event ->
+            currentNumber++
+            popupWindow.dismiss()
+            GameStart()
+            true
+        }
     }
 }
