@@ -12,11 +12,14 @@
         android:layout_weight="1"
         android:layout_marginHorizontal="24dp"
         android:layout_marginVertical="15dp"
+        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="19dp"
         android:text="textinnnnggggggggg"
         android:layout_gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.Toast"
-        android:background="@drawable/popupdrawable"
-        android:textColor="?TextColor"/>
+        android:background="@drawable/circle"
+        android:textColor="?TextColor"
+        />
 
 </LinearLayout>

@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        setContentView(view)
+        this.setContentView(view)
     }
     
 
@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
         popupWindow.isOutsideTouchable = false
         popupWindow.isTouchable = true
         popupWindow.isFocusable = false
-        val x = Random.nextInt(0, screenWidth - 10)
-        val y = Random.nextInt(0, screenHeight - 10)
+        val x = Random.nextInt(-(screenWidth - 10), screenWidth - 10)
+        val y = Random.nextInt(-(screenHeight - 10), screenHeight - 10)
 
         popupWindow.showAtLocation(view, Gravity.TOP, x, y) // dismiss the popup window when touched
 

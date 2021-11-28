@@ -7,6 +7,12 @@
         <entry key="..\:/Users/shidd/AndroidStudioProjects/NumberPopGame/app/src/main/res/layout/activity_game_page.xml" value="0.1" />
         <entry key="..\:/Users/shidd/AndroidStudioProjects/NumberPopGame/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/shidd/AndroidStudioProjects/NumberPopGame/app/src/main/res/layout/popuplayout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.2453125" />
+        <entry key="app/src/main/res/drawable/ovalbackgroud.xml" value="0.2453125" />
+        <entry key="app/src/main/res/drawable/ovalforeground.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1322463768115942" />
+        <entry key="app/src/main/res/layout/game_page.xml" value="0.1322463768115942" />
+        <entry key="app/src/main/res/layout/popuplayout.xml" value="0.1322463768115942" />
       </map>
     </option>
   </component>
