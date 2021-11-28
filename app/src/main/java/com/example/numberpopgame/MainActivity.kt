@@ -11,6 +11,11 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import com.example.numberpopgame.databinding.ActivityMainBinding
+import kotlin.random.Random
+import android.util.DisplayMetrics
+
+
+
 
 
 private lateinit var binding: ActivityMainBinding
@@ -28,8 +33,14 @@ class MainActivity : AppCompatActivity() {
 
             binding.StartButton.visibility = View.GONE
 
+            val displayMetrics = DisplayMetrics()
+            windowManager.defaultDisplay.getMetrics(displayMetrics)
 
-            GameStart()
+            var width = displayMetrics.widthPixels
+            var height = displayMetrics.heightPixels
+
+
+            GameStart(width, height)
             // val intent = Intent(this, GamePage::class.java)
             // startActivity(intent)
 
@@ -37,8 +48,9 @@ class MainActivity : AppCompatActivity() {
         }
         setContentView(view)
     }
+    
 
-    private fun GameStart() {
+    private fun GameStart(screenWidth: Int, screenHeight : Int) {
         var view = LayoutInflater.from(this).inflate(R.layout.popuplayout, null)
         var numberText = view.findViewById<TextView>(R.id.popup)
         numberText.text = currentNumber.toString()
@@ -49,14 +61,16 @@ class MainActivity : AppCompatActivity() {
         popupWindow.isOutsideTouchable = false
         popupWindow.isTouchable = true
         popupWindow.isFocusable = false
+        val x = Random.nextInt(0, screenWidth - 10)
+        val y = Random.nextInt(0, screenHeight - 10)
 
-        popupWindow.showAtLocation(view, Gravity.BOTTOM, 100, 10 + 1) // dismiss the popup window when touched
+        popupWindow.showAtLocation(view, Gravity.TOP, x, y) // dismiss the popup window when touched
 
         // dismiss the popup window when touched
         view.setOnTouchListener { v, event ->
             currentNumber++
             popupWindow.dismiss()
-            GameStart()
+            GameStart(screenWidth, screenHeight)
             true
         }
     }
